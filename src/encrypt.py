@@ -12,8 +12,10 @@ def get_public_key():
     http_pool = urllib3.PoolManager()
     response = http_pool.request("GET", "http://localhost:18888/security/rsaPublicKey")
     res = json.loads(response.data)
-    public_key = res['publicKey']
-    key_id = res['keyId']
+    print(res)
+    data = res['data']
+    public_key = data['publicKey']
+    key_id = data['keyId']
     public_key = "-----BEGIN PUBLIC KEY-----\n" + public_key + "\n-----END PUBLIC KEY-----"
     return key_id, public_key
 
