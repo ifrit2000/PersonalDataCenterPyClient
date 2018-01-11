@@ -40,7 +40,7 @@ def main():
         price_list = list()
         for coin in hold_coins:
             price = get_cur_price(coin["name"])
-            price_list.append(coin["name"] + " :" + str(price))
+            price_list.append(coin["name"] + " :" + str(round(price, 2)))
             usdt = price * coin["position"]
             total_usdt = total_usdt + usdt
 
@@ -49,8 +49,8 @@ def main():
             print(p)
 
         print("合计信息:")
-        print("usdt :" + str(total_usdt))
-        print("cny  :" + str((total_usdt + hold_usdt) * usdt_to_cny))
+        print("usdt :" + str(round(total_usdt, 2)))
+        print("cny  :" + str(round((total_usdt + hold_usdt) * usdt_to_cny, 2)))
         time.sleep(1)
 
 
