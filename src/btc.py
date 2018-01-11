@@ -51,6 +51,7 @@ def main():
         print("合计信息:")
         print("usdt :" + str(round(total_usdt, 2)))
         print("cny  :" + str(round((total_usdt + hold_usdt) * usdt_to_cny, 2)))
+        print("time :" + str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))))
         time.sleep(1)
 
 
