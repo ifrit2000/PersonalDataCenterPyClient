@@ -1,10 +1,10 @@
 {
-  "usdtToCny": 7.69,
-  "holdUsdt": 0.07433900,
+  "holdUsdt": 0.00063040,
+  "refresh": 5,
   "hold": [
     {
       "name": "eos",
-      "position": 52.02284300
+      "position": 101.87497420
     },
     {
       "name": "eth",
